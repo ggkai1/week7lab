@@ -1,0 +1,74 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="/">Home</a>
+        <a href="/addtask">Add New Task</a>
+        <a href="/listtasks">List Tasks</a>
+        <a href="/deletetask">Delete Tasks</a>
+        <a href="/updatetask">Update Tasks</a>
+        <a href="/adddeveloper">Add New Developer</a>
+    </h1>
+    </br>
+    <html>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    </br>
+    <h1>
+        <table>
+            <tr>
+                <td>Developer Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Level</td>
+                <td>State</td>
+                <td>Suburb</td>
+                <td>Street</td>
+                <td>Unit</td>
+                
+            </tr>
+            <% for (let i =0; i< developerdb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= developerdb[i]._id %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].developername.firstName %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].developername.lastName %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].level %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].address.state %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].address.suburb %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].address.street %>
+                    </td>
+                    <td>
+                        <%= developerdb[i].address.unit %>
+                    </td>
+                </tr>
+                <% }%>
+    </h1>
+</body>
+</html>
+</body>
+</html>
